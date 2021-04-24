@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <title>Document</title>
+    <style>
+        .small {
+            width: 400px;
+            height: 400px;
+        }
+
+        .card {
+            text-align: center;
+            background-color: #190d33;
+        }
+
+        .container {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            max-width: 1366px;
+        }
+
+        .container .row {
+            margin: 0 auto;
+        }
+
+        input {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row valign-wrapper">
+
+            <div class="card small" style=" box-shadow: 5px 5px 5px 5px #262b47;">
+                <div class="card-content white-text">
+                    <span class="card-title">WELCOME</span>
+                    <form id="form">
+                        <input type="email" placeholder="Mail-Id" id="email-ID" required>
+                        <input type="password" placeholder="Password" id="pass-word" required>
+                        <p id="error" style="color: red;"></p>
+                </div>
+                <div class="card-action">
+                    <button href="#" class="waves-effect pink darken-4 btn" id="log-in">login</button>
+                    <button href="#" class="waves-effect pink darken-4 btn" id="sign-up">signup</button>
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCI6aDJw5cjL7d2nc6dQHFob_rDiWxHZoI",
+        authDomain: "todo-1eb54.firebaseapp.com",
+        projectId: "todo-1eb54",
+        storageBucket: "todo-1eb54.appspot.com",
+        messagingSenderId: "1042258456729",
+        appId: "1:1042258456729:web:39a98fc1f4f5949d978808"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth()
+</script>
+<script src="auth.js"></script>
+
+</html>
